@@ -448,6 +448,23 @@ select{
     font-size: 2rem;
     
    }
+
+   .section-six-wrapper{
+    font-size: 0.5rem;
+    width: 95%;
+   }.faq h2{
+    font-size: 2rem;
+   }
+   .ready-watch h3{
+    font-size: 1rem;
+   }
+   .ready-watch span{
+    font-size: 1.2rem;
+   }
+   .section-six-wrapper button{
+    font-size: 1rem;
+   }
+   
    .flex-box-2{
         min-width: 85%;
         text-align: center;
