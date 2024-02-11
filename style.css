@@ -488,5 +488,12 @@ select{
    #invisible{
     display: none;
    }
+  
+   .earth-logo i{
+    font-size: 1rem;
+   }
+   .language-set option{
+    font-size: 1rem;
+   }
 }
 
