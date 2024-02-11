@@ -74,7 +74,7 @@ p{
 /* setting defaults fixed-width and fixed-height*/
 .fixed-height-800px
 {
-    height: 900px;
+    min-height: 900px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -82,7 +82,7 @@ p{
    
 }
 .fixed-height-500px{
-    height: 500px;
+    min-height: 500px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -91,11 +91,12 @@ p{
 }
 
 .fixed-height-400px{
-    height: 400px;
-    width: 100%;
+    min-height: 500px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   
 }
 .fixed-width{
@@ -109,7 +110,7 @@ p{
 .header{
     
     background-repeat: no-repeat, repeat;
-    height: 100vh;
+    min-height: 100%;
     background-blend-mode: darken;
     background-size: cover;
     
@@ -125,11 +126,12 @@ p{
 
 
 .header-section{
-    height: 80px;
+    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+   
 
 }
 
@@ -150,7 +152,7 @@ font-family:Netflix Sans;font-weight:900;src:url(https://assets.nflxext.com/ffe/
 
 }
 .signin{
-    box-sizing: border-box;
+box-sizing: border-box;
 font-optical-sizing: inherit;
 font-kerning: inherit;
 font-feature-settings: inherit;
@@ -178,12 +180,14 @@ right: 0;
 /* the centered article wrapper */
 .centered-article-wrapper{
     margin-top: 5rem;
-    width: 70%;
-    height: 300px;
+   max-width: 100%;
+    min-height: 400px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+  
+    
   
 }
 h1{
@@ -233,55 +237,44 @@ input{
    
 }
 
-/*  section features sections*/
+/*  second  sections*/
 
 
 .second-section{
-    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     
 }
 .flex-box-1{
-    height: 300px;
+   min-height: 300px;
     display: flex;
     justify-content: space-evenly;
-    position: relative;
-    
+    position: relative;   
    
-   
-}
-.flex-box-1 .caption{
-    margin-top: 4rem ;
-    width: 500px;
-    position: absolute;
-    left: 0;
 }
 
 .flex-box-1 img{
     height: 100%;
-    width: 500px;
-    position: absolute;
-    right: 0;
-    
-
+    max-width: 100%;
 }
 .flex-box-2{
-    height: 300px;
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-}
+    min-height: 300px;
+     display: flex;
+     justify-content: space-evenly;
+     position: relative;
+   
+     
+ }
+ 
 .flex-box-2 img{
     height: 100%;
-    width: 500px;
+    max-width: 100%;
 }
 
  /* six section  */
 
 .section-six-wrapper{
-    height: 550px;
+    min-height: 550px;
    
     
 }
@@ -332,7 +325,9 @@ i{
 
 /* footer section */
 .footer-content{
-    height: 290px;
+    width: 90%;
+    
+    
 }
 .contactus{
     margin: 0.5rem auto;
@@ -340,10 +335,9 @@ i{
 }
 
 .flex-links{
-    height: 190px;
+    min-height: 190px;
     width: 90%;
-    margin: 0.5rem auto;
-    position: relative;
+    margin: 1rem auto;
     display: flex;
     justify-content: space-between;
     line-height: 2.5rem;
@@ -351,19 +345,18 @@ i{
       
 }
 .flex{
-    width: 200px;
-    height:100%;
-    
-    
-   
-    
+    max-width: 100%;
+       
 }
 .flex a{
     display: block;
+    
+    
 }
 .language-wrapper{
     margin: 0.5rem auto;
-    width: 90%;
+    max-width: 90%;
+   
     
     
 }
@@ -397,6 +390,68 @@ select{
 
 /* for media screen */
 @media screen and (max-width:1200px) {
+    body{
+        flex-direction: column-reverse;
+    }
+    
+    .centered-article-wrapper{
+    width: 100%;   
+    }h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: white;
+    }
+    p{
+        font-size: 1rem;
+    font-weight: 400;
+    
+    }
    
+    h3{
+        margin: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    }
+
+   input{
+    display: none;
+   }
+
+   .flex-box-1{
+    min-width: 85%;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+   }
+   .flex-box-1 img{
+    max-width: 80%;
+   }
+   .flex-box-1 h2{
+    font-size: 2rem;
+    
+   }
+   .flex-box-2{
+        min-width: 85%;
+        text-align: center;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+       
+   }
+   .flex-box-2 h2{
+    font-size: 2rem;
+   }
+   .flex-box-2 img{
+    max-width: 80%;
+   }
+   .flex{
+    
+   }
+   .flex a{
+    font-size: 0.8rem;
+   }
+   #invisible{
+    display: none;
+   }
 }
 
